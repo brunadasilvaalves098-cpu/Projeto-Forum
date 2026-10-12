@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda Escolar</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+
+    <main>
+        <section id="inicio">
+            <h1>Ajuda Escolar</h1>
+            <p>Bem-vindo ao Ajuda Escolar!</p>
+            <p>Escolha uma opção para continuar:</p>
+
+            <button type="button" id="botaoAluno">Aluno</button>
+            <button type="button" id="botaoProfessor">Professor</button>
+        </section>
+
+        <section id="areaAluno" hidden>
+            <h1>Área do Aluno</h1>
+            <p>Envie sua dúvida anonimamente sobre um conteúdo que precisa revisar.</p>
+
+            <form id="formDuvida">
+                <label for="serieAluno">Ano/Série:</label>
+                <select id="serieAluno" required>
+                    <option value="">Selecione</option>
+                    <option>1º ano do Ensino Médio</option>
+                    <option>2º ano do Ensino Médio</option>
+                    <option>3º ano do Ensino Médio</option>
+                </select>
+
+                <br><br>
+
+                <label for="materia">Matéria:</label>
+                <select id="materia" required>
+                    <option value="">Selecione uma matéria</option>
+                </select>
+
+                <br><br>
+
+                <label for="data">Data:</label>
+                <input type="date" id="data" required>
+
+                <br><br>
+
+                <label for="duvida">Sua dúvida:</label>
+                <br>
+                <textarea id="duvida" rows="7" cols="45"
+                    placeholder="Digite sua dúvida aqui" required></textarea>
+
+                <br><br>
+
+                <button type="submit" id="enviarDuvida">Enviar dúvida</button>
+            </form>
+
+            <h2>Dúvidas enviadas</h2>
+            <div id="listaDuvidas"></div>
+
+            <button type="button" id="voltarAluno">Voltar</button>
+        </section>
+
+        <section id="areaProfessor" hidden>
+            <h1>Área do Professor</h1>
+            <p>Cadastre materiais para ajudar os alunos a revisar conteúdos anteriores.</p>
+
+            <form id="formMaterial">
+                <label for="nomeProfessor">Nome:</label>
+                <input type="text" id="nomeProfessor" required>
+
+                <br><br>
+
+                <label for="emailProfessor">E-mail:</label>
+                <input type="email" id="emailProfessor" required>
+
+                <br><br>
+
+                <label for="materiaProfessor">Matéria:</label>
+                <select id="materiaProfessor" required>
+                    <option value="">Selecione uma matéria</option>
+                </select>
+
+                <br><br>
+
+                <label for="tituloMaterial">Título do material:</label>
+                <input type="text" id="tituloMaterial" required>
+
+                <br><br>
+
+                <label for="tipoMaterial">Tipo de material:</label>
+                <select id="tipoMaterial" required>
+                    <option value="">Selecione</option>
+                    <option>Resumo</option>
+                    <option>Atividade</option>
+                    <option>Exercícios</option>
+                    <option>Explicação</option>
+                    <option>Vídeo</option>
+                </select>
+
+                <br><br>
+
+                <label for="descricaoMaterial">Descrição:</label>
+                <br>
+                <textarea id="descricaoMaterial" rows="7" cols="45"
+                    placeholder="Descreva o material" required></textarea>
+
+                <br><br>
+
+                <label for="arquivo">Adicionar arquivo:</label>
+                <input type="file" id="arquivo">
+
+                <br><br>
+
+                <button type="submit" id="adicionarMaterial">Adicionar material</button>
+            </form>
+
+            <h2>Dúvidas dos alunos</h2>
+            <div id="duvidasProfessor"></div>
+
+            <h2>Materiais cadastrados</h2>
+            <div id="listaMateriais"></div>
+
+            <button type="button" id="voltarProfessor">Voltar</button>
+        </section>
+    </main>
+
+</body>
+</html>
